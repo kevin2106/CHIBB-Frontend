@@ -6,17 +6,21 @@ import {registerUser} from '../utils/ApiService';
 
 class Register extends Component {
 
+
   constructor() {
     super()
     this.state = { email: "",
                    password: "",
                    confirmPassword: ""}
 
+const status = "";
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleConfirmPasswordChange = this.handleConfirmPasswordChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+
+
 
 
 
@@ -37,10 +41,7 @@ class Register extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    registerUser(this.state).then((status) => {
-      this.setState({ status });
-      console.log(status.data);
-    });
+  status = registerUser(this.state);
   }
 
 
@@ -56,7 +57,6 @@ class Register extends Component {
         <hr/>
         <form className="form-horizontal" onSubmit={this.onSubmit}>
           <fieldset>
-
             <div className="form-group">
               <label className="form-label" htmlFor="email">E-mail</label>
               <div className="controls">
