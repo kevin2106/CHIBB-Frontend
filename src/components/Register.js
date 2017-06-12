@@ -20,13 +20,6 @@ const status = "";
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-
-
-
-
-  componentDidMount() {
-  }
-
   handleEmailChange(e){
     this.setState({email: e.target.value});
     console.log(this.state.email);
@@ -42,6 +35,7 @@ const status = "";
   onSubmit(e) {
     e.preventDefault();
   status = registerUser(this.state);
+  window.location.href='/login';
   }
 
 

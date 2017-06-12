@@ -36,7 +36,7 @@ class Login extends Component {
   render() {
 
 
- const { grant_type, email, password } = this.state;
+ //const { grant_type, email, password } = this.state;
     return (
       <div>
         <Nav />

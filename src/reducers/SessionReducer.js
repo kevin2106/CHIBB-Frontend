@@ -8,6 +8,7 @@ export default function sessionReducer(state = initialState.session, action) {
       browserHistory.push('/homes')
       return !!sessionStorage.accessToken;
     case types.LOG_OUT:
+      console.log("LOGOUT TEST");
       browserHistory.push('/')
       return !!sessionStorage.accessToken;
     default:

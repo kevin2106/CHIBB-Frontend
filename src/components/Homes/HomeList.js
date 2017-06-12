@@ -1,14 +1,13 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import HomeListItem from './HomeListItem';
 import {Link} from 'react-router';
 
-
 const HomeList = ({homes}) => {
   return (
-
       <ul className="list-group">
         {homes.map(home =>
-           <li className="list-group-item" key={home.name}><Link to={'/home/' + home.name}>{home.name}</Link></li>
+           <HomeListItem key={home.Name} home={home}/>
         )}
       </ul>
   );
